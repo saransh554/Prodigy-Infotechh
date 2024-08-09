@@ -1,0 +1,221 @@
+//HTML CODE
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="titleCard">
+        <p class="title"><span>Weather</span> APP</p>
+        <p class="desc">Get the weather details of any city, Right Now!</p>
+        </div>
+        <div class="card">
+        <input id="cityInput" class="inputBox" type="text" placeholder="Enter your city">
+        <button id="searchBtn" class="btnSearch">Search</button>
+       </div>
+       
+       <div id="outputCard" class="output">
+        <div class="cityNameCard">
+        <p id="city-name"></p>
+        <p id="countryName"></p>
+        </div>
+        <div class="tempCard">
+            <p id="temp"></p><sup id="sup"></sup>
+        </div>
+        <p id="loc-time"></p>
+       </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
+
+
+
+// CSS CODE
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background: #000;
+    font-family: sans-serif;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    padding: 12px;
+    border-radius: 4px;
+}
+.card h2{
+    font-weight: bolder;
+}
+
+.inputBox{
+    width: 50%;
+    padding: 12px;
+    background: #d5d4d4;
+    border-radius: 8px;
+    border: none;
+}
+
+.btnSearch{
+    color: #fff;
+    width: 30%;
+    padding: 12px;
+    background: rgb(237, 86, 11);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+.btnSearch:hover{
+    background: rgb(182, 75, 21);
+}
+
+.titleCard{
+    padding: 12px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title{
+    text-align: center;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+.title span{
+    color: #2e8cea;
+}
+
+.desc{
+    text-align: center;    
+    color: #b3b3b3;
+    letter-spacing: 2px;
+    line-height: 22px;
+}
+
+
+/* Output from web  */
+
+.output{
+    visibility: hidden;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin-top: 20px;
+    color: #ffffff;
+    background: #043566;
+    border-radius: 4px;
+}
+.tempCard{
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+    align-items: self-start;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+#temp{
+    margin: 0;
+    font-size: 72px;
+}
+#sup{
+    color: #fff;
+}
+
+#loc-time{
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.cityNameCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#city-name{
+    font-size: 16px;
+    color: #ffffff;
+    padding: 14px;
+}
+#countryName{
+    background: #ec7805;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+// JAVA SCRIPT CODE
+
+
+
+APIKYE = 'c4b469446da64a62a7455412241903';
+
+
+// API = `https://api.weatherapi.com/v1/current.json?key=c4b469446da64a62a7455412241903&q=London&aqi=yes`
+
+const searchBtn = document.getElementById('searchBtn');
+const cityInput = document.getElementById('cityInput');
+
+
+// referencing output fields
+const cityName = document.getElementById('city-name');
+const countryName = document.getElementById('countryName')
+const localTime= document.getElementById('loc-time');
+const temp = document.getElementById('temp')
+const sup = document.getElementById('sup')
+
+
+
+async function getData(KYE, cityName){
+    const promise = await fetch(`https://api.weatherapi.com/v1/current.json?key=${KYE}&q=${cityName}&aqi=yes`);
+    return await promise.json();
+}
+
+searchBtn.addEventListener('click', async ()=>{
+    const input = cityInput.value;
+    document.getElementById('outputCard').style.visibility ='visible';
+    const result = await getData( APIKYE,input);
+    cityName.innerText =  ` ${result.location.name}, ${result.location.region}`
+    countryName.innerText = `${result.location.country}`
+    temp.innerText = `${result.current.temp_c}`
+    sup.innerText = '°C'
+    localTime.innerText = `${result.location.localtime}`;
+    
+
+})
