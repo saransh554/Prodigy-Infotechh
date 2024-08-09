@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="sttyle.css">
+
+</head>
+<body>
+        
+
+    <div class="portfolio">
+    
+        <nav>
+            <ul>
+                <li> <a href="home.html"> Home </a></li>
+                <li> <a href="about.html"> About </a></li>
+                <li> <a href="skills.html"> Skills </a></li>
+                <li> <a href="contact.html"> Contact </a></li>
+            </ul>
+
+        </nav>
+
+
+            <div class="image">
+                <img width=200px src="image1.jpg">
+            </div>
+            <div class="content">
+                
+                <h1> Hi,I'm Saransh jain 
+                <h2> Software Developer
+                    <p>
+                       
+                        Hi, I'm Saransh jain, a passionate software developer I specialize in technologies and languages], and I thrive on solving complex problems and creating innovative solutions.
+                        Throughout my career, I've had the opportunity to work on a variety of projects,e.g.netflix clone ,Web app development etc.
+                    </p> 
+                    
+            </h1>
+        </div>
+
+       <div class="button">
+
+        <button> Hire me</button>
+        <button> Let's talk</button>
+       </div>
+
+       
+
+       <div class="follow">
+        <p> Follow me </p>
+
+           <img src="facebook image.jpeg">
+        <img src="instagram image.jpeg">
+        <img src="twiiter image.png">
+       </div>
+       
+
+    </div>
+    
+</body>
+</html>
+
+
+// Contact 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="sttyle.css">
+    
+</head>
+<body>
+    <div class="portfolio">
+    
+
+            <nav>
+                <ul>
+                    <li> <a href="home.html"> Home </a></li>
+                    <li> <a href="about.html"> About </a></li>
+                    <li> <a href="skills.html"> Skills </a></li>
+                    <li> <a href="contact.html"> Contact </a></li>
+                </ul>
+    
+            </nav>
+            <h1>Contact Me</h1>
+            <form action="contact.html" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button>Send Message</button>
+            </form>
+
+            <div class="follow">
+
+                <p> Follow me</p>
+        
+                <img src="instagram image.jpeg">
+                <img src="facebook image.jpeg">
+                <img src="twiiter image.png">
+               </div>
+            <body>
+        </head>
+            
+            
+    </div>
+    
+</body>
+</html>
+
+
+//ABOUT ME
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="sttyle.css">
+</head>
+<body>
+    <div class="portfolio">
+
+        <nav>
+            <ul>
+                <li> <a href="home.html"> Home </a></li>
+                <li> <a href="about.html"> About </a></li>
+                <li> <a href="skills.html"> Skills </a></li>
+                <li> <a href="contact.html"> Contact </a></li>
+            </ul>
+            </nav>
+
+            <div class="imagee">
+                <img width=210px src="image1.jpg">
+            </div>
+
+            <div class="aboutt">
+                <h1>About Me</h1>
+                <p> 
+                    Hi, I'm Saransh jain, a passionate software developer I specialize in technologies and languages], and I thrive on solving complex problems and creating innovative solutions.
+
+                    Throughout my career, I've had the opportunity to work on a variety of projects,e.g.netflix clone ,Web app development etc.My journey has taken me through roles at previous companies or notable projects, where I honed my skills.
+
+                </p>
+
+                <p>
+                    I am proficient in C,C++,Python programming languages, frameworks, tools], and I am always eager to learn and adopt new technologies and languages. In my spare time, I contribute to open-source projects and enjoy working on  personal projects or hobbies related to software development.Outside of work, I enjoy to play cricket and also play mind games.These activities keep me grounded and inspire my creativity.
+
+                    Feel free to reach out to me at [my email-jsaransh57@gmail.com] or connect with me on [LinkedIn, GitHub, other social media].
+                </p>
+            </div>
+
+            <div class="follow">
+                <p> Follow me </p>
+        
+                   <img src="facebook image.jpeg">
+                <img src="instagram image.jpeg">
+                <img src="twiiter image.png">
+               </div>
+
+    </div>
+    
+</body>
+</html>
+
+
+// SKILLS
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my skills </title>
+    <link rel="stylesheet" href="sttyle.css">
+</head>
+<body>
+     <div class="portfolio">
+        <nav>
+            <ul>
+                <li> <a href="home.html"> Home </a></li>
+                <li> <a href="about.html"> About </a></li>
+                <li> <a href="skills.html"> Skills </a></li>
+                <li> <a href="contact.html"> Contact </a></li>
+            </ul>
+
+        </nav>
+
+        <header>
+            <h1>My Skills</h1>
+        </header>
+
+        <div class="image">
+            <img width=200px src="image1.jpg">
+        </div>
+        <main>
+            <section id="skills">
+                <div class="skill-category">
+                    <h2>Programming Languages</h2>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>HTML/CSS</li>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>Ruby</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                
+                        <div class="skill-category">
+                    <h3>Frameworks and Libraries</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Angular</li>
+                        <li>Vue.js</li>
+                        <li>Django</li>
+                        <li>Flask</li>
+                        <li>Node.js</li>
+                
+                    </ul>
+                </div>
+    
+    
+
+    </div>
+    
+</body>
+</html>
+
+
+//CSS FILE
+
+body 
+{
+    background-color:rgb(47, 49, 51);
+    padding:50px;
+    
+}
+
+.portfolio{
+    background-color:black;
+    height:750px;
+    width:1100px;
+    border-radius:10px;
+
+
+}
+nav{
+    padding:50px;
+}
+
+nav ul{
+    display:flex;
+}
+
+ul li a{
+    padding:45px;
+    font-size:25px;
+    list-style:none;
+    color:rgb(229, 120, 120);
+    text-decoration:none;
+    font-weight:bolder;
+}
+
+    .image img{
+    float:right;
+    padding:40px;
+}
+.content{
+    padding:10px;
+}
+
+.content h1{
+color:white;
+padding:20px;
+font-size:30px;
+}
+
+h2{
+color:aqua;
+padding:15px;
+
+}
+h2 p{
+color:white;
+font-size:22px;
+}
+.button{
+margin:20px;
+}
+
+.button button{
+padding:15px;
+border:10px;
+margin:10px;
+color:black;
+background-color:cyan;
+font-weight:bolder;
+font-size:15px;
+}
+
+
+.follow{
+margin:10px;
+}
+.follow p{
+color:white;
+font-size:20px;
+margin:20px;
+}
+      .follow img{
+       margin:10px;
+       border-radius:350px;
+       width:45px;
+}
+.imagee img{
+    float:right;
+    padding:40px;
+    width:170px;
+    border-radius:100px;
+
+}
+.aboutt{
+    color:white;
+    padding:5px;
+    margin:15px;
+    font-size:20px;
+}
+.aboutt p{
+    color:cyan;
+    font-size:23px;
+}
+
+h1{
+    color:rgb(244, 238, 238);
+    padding:10px;
+    margin:10px;
+    font-size:40px;
+}
+
+
+form {
+    background-color: #9b666e;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(90, 41, 110, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #603232;
+    border-radius: 5px;
+}
+
+ button {
+    background-color: rgb(11, 224, 224);
+    color: #f1ecec;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+header h1{
+    font-size:35px;
+
+    
+
+    
+}
+.skill-category{
+    color:white;
+}
+
+ul{
+    margin:10px;
+}
+
+ul li{
+     font-size:25px;
+}
+
+h3{
+    color:cyan;
+    font-size:25px;
+    margin:15px;
+}
+
+
+
+
+
+
+
+ 
